@@ -1,44 +1,38 @@
-# note-taker
+# Note Taker
 
-# Professional README Generator Starter Code
 
 ## Description
 
-The purpose of this generator is to streamline creation of professional README.md files for developers who are working within a constrained time allotment.
+Application that allows for the writing and saving of notes to enable improved conceptual organization throughout the task completion process.
 
-This is a command-line application that accepts user input as users respond to question prompts and then generates a high-quality, professional README.md completed with the:
 
-- Title of the project
-- Sections:
-  - Description
-  - Table of Contents
-  - Installation
-  - Usage
-  - License
-  - Contributing
-  - Tests
-  - Questions
+# TO DO
 
-Choosing a license for the application from the list of options chosen generates a badge for that license near the top of the README.  A notice is added to the section of the README entitled License that explains which license the application is covered under
+Opening the Note Taker presents lication user with a landing page with a link to a notes page.
 
-Entering a GitHub username will add the GitHub username to 'Questions' section of the README, with a link to my GitHub profile.
+Clicking on the link to the notes page presents user with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column.
 
-Entering an email address adds that email to the 'Questions' section of the README, with instructions on how to reach me with additional questions
+Entering a new note title and the note’s text prompts a SAVE icon to appear in the navigation at the top of the page.
 
-Clicking on the Table of Contents takes the user to the corresponding section of the README.
+Clicking on the SAVE icon saves the new note the user has entered.  Saved notes appear in the left-hand column with the other existing notes.
+
+Clicking on a exisiting note in the list in the left-hand column opens the note into the right-hand column.
+
+Clicking on the WRITE icon in the navigation at the top of the page presents the user with empty fields to enter a new note title and the note’s text in the right-hand column
+
 
 ## Installation
 * npm
 * inquirer
 
 ## Usage
-Speed up file production of needed README.md files by answering prompts.
+Provide options for business owners to write and save notes.
 
 
 ## Website
-https://cphill11.github.io/readme-generator/
+Github: 
 
-Screencastify link: https://watch.screencastify.com/v/VhVZlVpDkbl2nnwgSp4r
+Screencastify link: 
 
 ## Image
 

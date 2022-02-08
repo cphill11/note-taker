@@ -1,3 +1,8 @@
+const fs = require('fs');
+const express =require('express');
+// instantiate server
+const app = express();
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -181,3 +186,8 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+// chain listen method
+app.listen(3001, () => {
+  console.log(`API server now on port 3001!`)
+});

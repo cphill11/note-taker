@@ -24,6 +24,8 @@ Clicking on the WRITE icon in the navigation at the top of the page presents the
 ## Installation
 * npm
 * inquirer
+* express
+* jest
 
 ## Usage
 Provide options for business owners to write and save notes.

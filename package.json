@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "inquirer": "^8.2.0"
+  },
+  "name": "note-taker",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cphill11/note-taker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cphill11/note-taker/issues"
+  },
+  "homepage": "https://github.com/cphill11/note-taker#readme",
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

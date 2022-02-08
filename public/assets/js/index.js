@@ -3,6 +3,9 @@ const express =require('express');
 // instantiate server
 const app = express();
 
+const { index } = require('./develop/public/index');
+const { notes } = require ('./develop/public/notes');
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -184,6 +187,19 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
+
+
+
+app.get('/api/index', (req, res) => {
+  res.send('INDEX');
+});
+
+app.get('/api/notes' , (req, res) => {
+  res.send('NOTES');
+});
+
+
+
 
 getAndRenderNotes();
 

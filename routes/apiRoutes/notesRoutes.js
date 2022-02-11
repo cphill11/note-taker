@@ -1,46 +1,31 @@
-// draft based on  zookeeper
 const router = require("express").Router();
+const notes = require("../../lib/notes");
 const NotesClass = require("../../lib/notes");
 // const { notes } = require("../../db/db.json");
-
+const { createNewNotes, validateNewNotes } = require("../../lib/notes");
 
 // get
 router.get("/notes", (req, res) => {
   NotesClass.getNotes().then((notes) => {
     return res.json(notes);
-  })
-})
+  });
+});
+
 // post
+router.post("/notes", (req, res) => {
+  if (!validateNewNotes(req.body)) {
+    res.status(400).send("The note has not been properly updated.");
+  } else {
+    const newNote = createNewNotes(req.body, notes);
+    res.json(newNote);
+  }
+});
+
+
+// save (???)
 
 // delete
 
 
-// router.get("/notes", (req, res) => {
-//   let results = notes;
-//   // if (req.query) {
-//   //   results = filterByQuery(req.query, results);
-//   // }
-//   res.json(results);
-// });
-
-// router.get("/notes/:id", (req, res) => {
-//   const result = findById(req.params.id, notes);
-//   if (result) {
-//     res.json(result);
-//   } else {
-//     res.send(404);
-//   }
-// });
-
-// router.post("/notes", (req, res) => {
-//   req.body.id = notes.length.toString();
-
-//   if (!validateNote(req.body)) {
-//     res.status(400).send("The note is not properly formatted.");
-//   } else {
-//     const note = createNewNote(req.body, notes);
-//     res.json(note);
-//   }
-// });
 
 module.exports = router;

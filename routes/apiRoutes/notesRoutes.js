@@ -1,18 +1,14 @@
 // draft based on  zookeeper
 const router = require("express").Router();
-const {
-  filterByQuery,
-  findById,
-  createNewNote,
-  validateNote,
-
-} = require("../../lib/notes");
-const { notes } = require("../../db/db.json");
+const NotesClass = require("../../lib/notes");
+// const { notes } = require("../../db/db.json");
 
 
 // get
 router.get("/notes", (req, res) => {
-  
+  NotesClass.getNotes().then((notes) => {
+    return res.json(notes);
+  })
 })
 // post
 
@@ -21,9 +17,9 @@ router.get("/notes", (req, res) => {
 
 // router.get("/notes", (req, res) => {
 //   let results = notes;
-//   if (req.query) {
-//     results = filterByQuery(req.query, results);
-//   }
+//   // if (req.query) {
+//   //   results = filterByQuery(req.query, results);
+//   // }
 //   res.json(results);
 // });
 

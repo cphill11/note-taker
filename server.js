@@ -1,6 +1,3 @@
-// tried this w/ code @29 and failed
-// const { notes } = require('./db/index')
-
 // create route that front-end can request data from
 const express = require('express');
 // require the data that is requested by the front-end code
@@ -15,19 +12,16 @@ const app = express();
 
 // parse incoming JSON data
 app.use(express.json());
+
 // tell Express.js app to intercept POST request before it gets to callback fxn; parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
+
 // establish Express.js middleware to instruct server to make certain files readily available
 app.use(express.static('public'));
 
 // app uses router set up in apiRoutes or HTML routes
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
-
-// tried and failed w/ this
-// app.get('/api/index', (req, res) => {
-//     res.send('Hello!');
-// });
 
 // chain listen() method onto our server
 app.listen(PORT, () => {

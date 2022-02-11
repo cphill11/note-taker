@@ -16,7 +16,7 @@ Entering a new note title and the note’s text prompts a SAVE icon to appear in
 
 Clicking on the SAVE icon saves the new note the user has entered.  Saved notes appear in the left-hand column with the other existing notes.
 
-Clicking on a exisiting note in the list in the left-hand column opens the note into the right-hand column.
+Clicking on a existing note in the list in the left-hand column opens the note into the right-hand column.
 
 Clicking on the WRITE icon in the navigation at the top of the page presents the user with empty fields to enter a new note title and the note’s text in the right-hand column
 

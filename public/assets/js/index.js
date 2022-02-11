@@ -1,3 +1,5 @@
+// provided by CWRU files
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;

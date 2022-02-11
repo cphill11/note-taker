@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "express": "^4.17.2",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
   },
   "name": "note-taker",
   "description": "",
@@ -24,5 +26,8 @@
   "keywords": [],
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

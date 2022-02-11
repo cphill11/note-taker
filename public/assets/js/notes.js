@@ -5,8 +5,8 @@ const express =require('express');
 // instantiate server
 const app = express();
 
-const { index } = require('./data/public/index');
-const { notes } = require ('./data/public/notes');
+const { index } = require('../public/index');
+const { notes } = require ('../public/notes');
 
 
 app.get('/api/index', (req, res) => {

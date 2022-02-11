@@ -1,4 +1,3 @@
-// draft based off zookeeper
 const router = require("express").Router();
 const path = require("path");
 

@@ -1,5 +1,9 @@
-// draft based off zookeeper
+// tried this w/ code @29 and failed
+// const { notes } = require('./db/index')
+
+// create route that front-end can request data from
 const express = require('express');
+
 
 // tell heroku to use port process environment
 const PORT = process.env.PORT || 3001;
@@ -24,6 +28,10 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
+// tried and failed w/ this
+// app.get('/api/index', (req, res) => {
+//     res.send('Hello!');
+// });
 
 // chain listen() method onto our server
 app.listen(PORT, () => {

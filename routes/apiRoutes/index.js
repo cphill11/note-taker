@@ -1,9 +1,8 @@
 const router = require('express').Router();
 
 // add middleware so that app knows about routes into animalRoutes.js
-const notesRoutes = require('../routes/apiRoutes/notesRoutes');
+const notesRoutes = require('./notesRoutes');
 
-router.use(notesRoutes);
-router.use(require('./notesRoutes'));
+router.use('/notes', notesRoutes);
 
 module.exports = router;

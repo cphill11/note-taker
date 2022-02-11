@@ -3,14 +3,10 @@ const router = require("express").Router();
 const {
   filterByQuery,
   findById,
-  // was createNewZookeeper
   createNewNote,
-
-  //was validate Zookeeper
   validateNote,
-  //path might be wrong!!
+
 } = require("../../lib/notes");
-//path might be wrong!!
 const { notes } = require("../../db/notes");
 
 router.get("/notes", (req, res) => {

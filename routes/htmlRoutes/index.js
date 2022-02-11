@@ -1,16 +1,14 @@
 // draft based off zookeeper
-const path = require("path");
 const router = require("express").Router();
+const path = require("path");
 
 // route to index.html; ('/') connects to root route of server
 router.get("/", (req, res) => {
-    // was ../../public/index.html"));
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+  res.sendFile(path.join(__dirname, "../../public/index.html"));
 });
 
 router.get("/notes", (req, res) => {
-    // was ../../public/notes.html"));
-  res.sendFile(path.join(__dirname, "../public/notes.html"));
+  res.sendFile(path.join(__dirname, "../..public/notes.html"));
 });
 
 // wildcard ('*') route functionality

@@ -12,7 +12,6 @@ const app = express();
 
 // parse incoming JSON data
 app.use(express.json());
-
 // tell Express.js app to intercept POST request before it gets to callback fxn; parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 

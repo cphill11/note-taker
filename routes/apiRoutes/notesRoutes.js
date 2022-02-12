@@ -5,8 +5,8 @@ const getNewNotes = require("../../lib/notes");
 
 
 // get (path problem here???)   // public/assets/js/index.js
-router.get("/notes", (req, res) => {
- getNewNotes.getNotes().then((notes) => {
+router.get("/", (req, res) => {
+ getNewNotes.read().then((notes) => {
     return res.json(notes);
   });
 });

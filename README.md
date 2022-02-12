@@ -24,9 +24,9 @@ Provide options for business owners to write and save notes.
 
 
 ## Website
-Github: 
+Github: https://cphill11.github.io/note-taker/
 
-Heroku link:
+
 
 ## Image
 

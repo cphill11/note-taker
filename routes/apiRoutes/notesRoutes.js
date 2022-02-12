@@ -12,8 +12,8 @@ router.get("/", (req, res) => {
 });
 
 // post  (path problem here???)
-router.post("/notes", (req, res) => {
-  store.addNotes(req.body).then((notes)=> {
+router.post("/", (req, res) => {
+  getNewNotes.write(req.body).then((notes)=> {
     res.json(notes);
   })
   .catch((error) => res.status(500).json(error));
@@ -21,7 +21,7 @@ router.post("/notes", (req, res) => {
 
 
 // delete not right; add colon??
-router.delete('/notes/', (req, res) => {
+router.delete('/', (req, res) => {
    res.json(req.body);
 });
 

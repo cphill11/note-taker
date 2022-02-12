@@ -2,7 +2,7 @@ const router = require("express").Router();
 const notes = require("../../lib/notes");
 const getNewNotes = require("../../lib/notes");
 // const { notes } = require("../../db/db.json");
-const { createNewNotes, validateNewNotes } = require("../../lib/notes");
+
 
 // get (path problem here???)   // public/assets/js/index.js
 router.get("/notes", (req, res) => {
@@ -13,19 +13,16 @@ router.get("/notes", (req, res) => {
 
 // post  (path problem here???)
 router.post("/notes", (req, res) => {
-  if (!validateNewNotes(req.body)) {
-    res.status(400).send("The note has not been properly updated.");
-  } else {
-    const newNote = createNewNotes(req.body, notes);
-    res.json(newNote);
-  }
+  store.addNotes(req.body).then((notes)=> {
+    res.json(notes);
+  })
+  .catch((error) => res.status(500).json(error));
 });
 
 
-// save (???)
-
-// delete
-
-
+// delete not right; add colon??
+router.delete('/notes/', (req, res) => {
+   res.json(req.body);
+});
 
 module.exports = router;

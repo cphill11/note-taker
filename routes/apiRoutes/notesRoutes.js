@@ -21,8 +21,15 @@ router.post("/", (req, res) => {
 
 
 // delete not right; add colon??
-router.delete('/', (req, res) => {
-   res.json(req.body);
+router.delete('/:id', (req, res) => {
+  getNewNotes.deleteNotes(req.params.id).then(() => {
+    res.json({ok:true});
+  })
+  .catch((error) => {
+    console.log(error);
+    res.status(500).json(error)
+  })
+   //res.json(req.body);
 });
 
 module.exports = router;

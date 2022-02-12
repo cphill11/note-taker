@@ -22,11 +22,8 @@ Clicking on the SAVE icon saves the new note the user has entered.  Saved notes 
 ## Usage
 Provide options for business owners to write and save notes.
 
-
 ## Website
 Github: https://cphill11.github.io/note-taker/
-
-
 
 ## Image
 

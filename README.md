@@ -25,6 +25,8 @@ Provide options for business owners to write and save notes.
 ## Website
 Github: https://cphill11.github.io/note-taker/
 
+https://github.com/cphill11/note-taker.git
+
 Heroku Link: https://intense-eyrie-70687.herokuapp.com/
 
 ## Image
